@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import youtube_dl
-<<<<<<< HEAD
 import subprocess
 import os
 from CredData import *
