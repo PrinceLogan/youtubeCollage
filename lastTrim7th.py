@@ -2,6 +2,7 @@
 
 import subprocess
 import os
+<<<<<<< HEAD
 import sys
 
 home = os.path.expanduser("~")
@@ -9,6 +10,11 @@ tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
 logLoc = os.path.join(home, "youtubeCollage", "log.txt")
 
 sys.stderr = open(logLoc, 'a+')
+=======
+
+home = os.path.expanduser("~")
+tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
+>>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 with open(tmpLoc, 'r') as myfile:
     rando_word=myfile.read().replace('\n', '')
@@ -33,12 +39,21 @@ vid5outputLoc = os.path.join(home, "youtubeCollage", vid5output)
 vid6output = rando_word + '00006' + '_Resized' + '.mp4'
 vid6outputLoc = os.path.join(home, "youtubeCollage", vid6output)
 
+<<<<<<< HEAD
 bashVideoTrim1first = ("ffmpeg -i {0} -ss 00:00:00 -t 00:00:05 -async 1 {1}".format(vid1inputLoc,vid1outputLoc))
 bashVideoTrim2first = ("ffmpeg -i {0} -ss 00:00:00 -t 00:00:10 -async 1 {1}".format(vid3inputLoc,vid2outputLoc))
 bashVideoTrim3first = ("ffmpeg -i {0} -ss 00:00:00 -t 00:00:07 -async 1 {1}".format(vid2inputLoc,vid3outputLoc))
 bashVideoTrim1second = ("ffmpeg -i {0} -ss 00:00:13 -t 00:00:18 -async 1 {1}".format(vid3inputLoc,vid4outputLoc))
 bashVideoTrim2second = ("ffmpeg -i {0} -ss 00:00:13 -t 00:00:18 -async 1 {1}".format(vid2inputLoc,vid5outputLoc))
 bashVideoTrim3second = ("ffmpeg -i {0} -ss 00:00:13 -t 00:00:18 -async 1 {1}".format(vid1inputLoc,vid6outputLoc))
+=======
+bashVideoTrim1first = ("ffmpeg -i {0} -ss 00:00:00 -t 00:00:07 -async 1 {1}".format(vid1inputLoc,vid1outputLoc))
+bashVideoTrim2first = ("ffmpeg -i {0} -ss 00:00:00 -t 00:00:13 -async 1 {1}".format(vid3inputLoc,vid2outputLoc))
+bashVideoTrim3first = ("ffmpeg -i {0} -ss 00:00:00 -t 00:00:09 -async 1 {1}".format(vid2inputLoc,vid3outputLoc))
+bashVideoTrim1second = ("ffmpeg -i {0} -ss 00:00:13 -t 00:00:23 -async 1 {1}".format(vid3inputLoc,vid4outputLoc))
+bashVideoTrim2second = ("ffmpeg -i {0} -ss 00:00:13 -t 00:00:20 -async 1 {1}".format(vid2inputLoc,vid5outputLoc))
+bashVideoTrim3second = ("ffmpeg -i {0} -ss 00:00:13 -t 00:00:23 -async 1 {1}".format(vid1inputLoc,vid6outputLoc))
+>>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 process1 = subprocess.check_call(bashVideoTrim1first.split(), stdout=subprocess.PIPE)
 process2 = subprocess.check_call(bashVideoTrim2first.split(), stdout=subprocess.PIPE)

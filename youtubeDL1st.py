@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import youtube_dl
+<<<<<<< HEAD
 import subprocess
 import os
 from CredData import *
@@ -31,6 +32,19 @@ sys.stderr = open(logLoc, 'a+')
 
 x = "ytsearch100:"
 y = "%(autonumber)s.%(ext)s"
+=======
+from random_word import RandomWords
+import subprocess
+import os
+
+home = os.path.expanduser("~")
+tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
+
+r = RandomWords()
+x = "ytsearch100:"
+y = "%(autonumber)s.%(ext)s"
+rando_word = r.get_random_word(hasDictionaryDef="true", includePartOfSpeech="verb", minCorpusCount=1, maxCorpusCount=10, minDictionaryCount=1, maxDictionaryCount=10, minLength=3, maxLength=6)
+>>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 f = open(tmpLoc, "w")
 f.write("{}".format(rando_word))

@@ -3,6 +3,7 @@
 import random
 import subprocess
 import os
+<<<<<<< HEAD
 import sys
 
 home = os.path.expanduser("~")
@@ -10,6 +11,11 @@ tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
 logLoc = os.path.join(home, "youtubeCollage", "log.txt")
 
 sys.stderr = open(logLoc, 'a+')
+=======
+
+home = os.path.expanduser("~")
+tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
+>>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 with open(tmpLoc, 'r') as myfile:
     rando_word=myfile.read().replace('\n', '')
@@ -45,10 +51,13 @@ def chorus_1():
     bashVideoAlter4 = ("ffmpeg -i {0} -af chorus=0.5:0.9:50|60|40:0.4|0.32|0.3:0.25|0.4|0.3:2|2.3|1.3 {1}".format(vid1AlteredLoc,vid1FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter4.split(), stdout=subprocess.PIPE)
 
+<<<<<<< HEAD
 def nothing_1():
     bashVideoAlter5 = ("cp {0} {1}".format(vid1AlteredLoc,vid1FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter5.split(), stdout=subprocess.PIPE)
 
+=======
+>>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 def echo_2():
     bashVideoAlter1 = ("ffmpeg -i {0} -af aecho=0.8:0.9:1000|500:0.7|0.5 {1}".format(vid2AlteredLoc,vid2FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter1.split(), stdout=subprocess.PIPE)
@@ -65,10 +74,13 @@ def chorus_2():
     bashVideoAlter4 = ("ffmpeg -i {0} -af chorus=0.5:0.9:50|60|40:0.4|0.32|0.3:0.25|0.4|0.3:2|2.3|1.3 {1}".format(vid2AlteredLoc,vid2FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter4.split(), stdout=subprocess.PIPE)
 
+<<<<<<< HEAD
 def nothing_2():
     bashVideoAlter5 = ("cp {0} {1}".format(vid2AlteredLoc,vid2FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter5.split(), stdout=subprocess.PIPE)
 
+=======
+>>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 def echo_3():
     bashVideoAlter1 = ("ffmpeg -i {0} -af aecho=0.8:0.9:1000|500:0.7|0.5 {1}".format(vid3AlteredLoc,vid3FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter1.split(), stdout=subprocess.PIPE)
@@ -85,6 +97,7 @@ def chorus_3():
     bashVideoAlter4 = ("ffmpeg -i {0} -af chorus=0.5:0.9:50|60|40:0.4|0.32|0.3:0.25|0.4|0.3:2|2.3|1.3 {1}".format(vid3AlteredLoc,vid3FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter4.split(), stdout=subprocess.PIPE)
 
+<<<<<<< HEAD
 def nothing_3():
     bashVideoAlter5 = ("cp {0} {1}".format(vid3AlteredLoc,vid3FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter5.split(), stdout=subprocess.PIPE)
@@ -92,6 +105,11 @@ def nothing_3():
 list_1 = [echo_1, tremolo_1, vibrato_1, chorus_1, nothing_1]
 list_2 = [echo_2, tremolo_2, vibrato_2, chorus_2, nothing_2]
 list_3 = [echo_3, tremolo_3, vibrato_3, chorus_3, nothing_3]
+=======
+list_1 = [echo_1, tremolo_1, vibrato_1, chorus_1]
+list_2 = [echo_2, tremolo_2, vibrato_2, chorus_2]
+list_3 = [echo_3, tremolo_3, vibrato_3, chorus_3]
+>>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 random.choice(list_1)()
 random.choice(list_2)()

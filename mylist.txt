@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 file Genie00001_Resized.mp4
 file Genie00002_Resized.mp4
 file Genie00003_Resized.mp4
 file Genie00004_Resized.mp4
 file Genie00005_Resized.mp4
 file Genie00006_Resized.mp4
+=======
+file swedge00001_Resized.mp4
+file swedge00002_Resized.mp4
+file swedge00003_Resized.mp4
+file swedge00004_Resized.mp4
+file swedge00005_Resized.mp4
+file swedge00006_Resized.mp4
+>>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
