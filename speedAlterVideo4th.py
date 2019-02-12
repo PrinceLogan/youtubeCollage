@@ -3,7 +3,6 @@
 import random
 import subprocess
 import os
-<<<<<<< HEAD
 import sys
 
 home = os.path.expanduser("~")
@@ -11,11 +10,9 @@ tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
 logLoc = os.path.join(home, "youtubeCollage", "log.txt")
 
 sys.stderr = open(logLoc, 'a+')
-=======
 
 home = os.path.expanduser("~")
 tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
->>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 with open(tmpLoc, 'r') as myfile:
     rando_word=myfile.read().replace('\n', '')
@@ -42,7 +39,6 @@ def vid_1_slow():
     bashVideoAlter2 = ("ffmpeg -i {0} -filter_complex [0:v]setpts=2.0*PTS[v];[0:a]atempo=0.5[a] -map [v] -map [a] {1}".format(vid1outputLoc,vid1AlteredLoc))
     process1 = subprocess.check_call(bashVideoAlter2.split(), stdout=subprocess.PIPE)
 
-<<<<<<< HEAD
 def vid_1_nothing():
     bashVideoAlter3 = ("cp {0} {1}".format(vid1outputLoc,vid1AlteredLoc))
     process1 = subprocess.check_call(bashVideoAlter3.split(), stdout=subprocess.PIPE)
@@ -71,31 +67,9 @@ def vid_3_nothing():
     bashVideoAlter9 = ("cp {0} {1}".format(vid3outputLoc,vid3AlteredLoc))
     process1 = subprocess.check_call(bashVideoAlter9.split(), stdout=subprocess.PIPE)
 
-
 list_1 = [vid_1_fast, vid_1_slow, vid_1_nothing]
 list_2 = [vid_2_fast, vid_2_slow, vid_2_nothing]
 list_3 = [vid_3_fast, vid_3_slow, vid_3_nothing]
-=======
-def vid_2_fast():
-    bashVideoAlter3 = ("ffmpeg -i {0} -filter_complex [0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a] -map [v] -map [a] {1}".format(vid2outputLoc,vid2AlteredLoc))
-    process1 = subprocess.check_call(bashVideoAlter3.split(), stdout=subprocess.PIPE)
-
-def vid_2_slow():
-    bashVideoAlter4 = ("ffmpeg -i {0} -filter_complex [0:v]setpts=2.0*PTS[v];[0:a]atempo=0.5[a] -map [v] -map [a] {1}".format(vid2outputLoc,vid2AlteredLoc))
-    process1 = subprocess.check_call(bashVideoAlter4.split(), stdout=subprocess.PIPE)
-
-def vid_3_fast():
-    bashVideoAlter5 = ("ffmpeg -i {0} -filter_complex [0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a] -map [v] -map [a] {1}".format(vid3outputLoc,vid3AlteredLoc))
-    process1 = subprocess.check_call(bashVideoAlter5.split(), stdout=subprocess.PIPE)
-
-def vid_3_slow():
-    bashVideoAlter6 = ("ffmpeg -i {0} -filter_complex [0:v]setpts=2.0*PTS[v];[0:a]atempo=0.5[a] -map [v] -map [a] {1}".format(vid3outputLoc,vid3AlteredLoc))
-    process1 = subprocess.check_call(bashVideoAlter6.split(), stdout=subprocess.PIPE)
-
-list_1 = [vid_1_fast, vid_1_slow]
-list_2 = [vid_2_fast, vid_2_slow]
-list_3 = [vid_3_fast, vid_3_slow]
->>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 random.choice(list_1)()
 random.choice(list_2)()

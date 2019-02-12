@@ -2,7 +2,6 @@
 
 import subprocess
 import os
-<<<<<<< HEAD
 import sys
 
 home = os.path.expanduser("~")
@@ -10,11 +9,9 @@ tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
 logLoc = os.path.join(home, "youtubeCollage", "log.txt")
 
 sys.stderr = open(logLoc, 'a+')
-=======
 
 home = os.path.expanduser("~")
 tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
->>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 with open(tmpLoc, 'r') as myfile:
     rando_word=myfile.read().replace('\n', '')
@@ -39,21 +36,12 @@ vid6outputLoc = os.path.join(home, "youtubeCollage", vid6output)
 bashVideoArchive = ("cp {0} {1}".format(finalLoc,archLoc))
 process1 = subprocess.check_call(bashVideoArchive.split(), stdout=subprocess.PIPE)
 
-<<<<<<< HEAD
 bashCleanUpVideo1 = ("rm {}".format(vid1outputLoc))
 bashCleanUpVideo2 = ("rm {}".format(vid2outputLoc))
 bashCleanUpVideo3 = ("rm {}".format(vid3outputLoc))
 bashCleanUpVideo4 = ("rm {}".format(vid4outputLoc))
 bashCleanUpVideo5 = ("rm {}".format(vid5outputLoc))
 bashCleanUpVideo6 = ("rm {}".format(vid6outputLoc))
-=======
-bashCleanUpVideo1 = ("rm {}".format(vid1output))
-bashCleanUpVideo2 = ("rm {}".format(vid2output))
-bashCleanUpVideo3 = ("rm {}".format(vid3output))
-bashCleanUpVideo4 = ("rm {}".format(vid4output))
-bashCleanUpVideo5 = ("rm {}".format(vid5output))
-bashCleanUpVideo6 = ("rm {}".format(vid6output))
->>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 bashCleanUpVideo7 = ("rm {}".format(finalLoc))
 
 process1 = subprocess.check_call(bashCleanUpVideo1.split(), stdout=subprocess.PIPE)

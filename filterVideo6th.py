@@ -3,7 +3,6 @@
 import random
 import subprocess
 import os
-<<<<<<< HEAD
 import sys
 
 home = os.path.expanduser("~")
@@ -11,11 +10,9 @@ tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
 logLoc = os.path.join(home, "youtubeCollage", "log.txt")
 
 sys.stderr = open(logLoc, 'a+')
-=======
 
 home = os.path.expanduser("~")
 tmpLoc = os.path.join(home, "youtubeCollage", "tmp.txt")
->>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 with open(tmpLoc, 'r') as myfile:
     rando_word=myfile.read().replace('\n', '')
@@ -58,13 +55,10 @@ def invertor_1():
     bashVideoAlter6 = ("ffmpeg -i {0} -vf frei0r=invert0r {1}".format(vid1AlteredLoc,vid1FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter6.split(), stdout=subprocess.PIPE)
 
-<<<<<<< HEAD
 def nothing_1():
     bashVideoAlter7 = ("cp {0} {1}".format(vid1AlteredLoc,vid1FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter7.split(), stdout=subprocess.PIPE)
 
-=======
->>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 def vertigo_2():
     bashVideoAlter1 = ("ffmpeg -i {0} -vf frei0r=vertigo:0.2 {1}".format(vid2AlteredLoc,vid2FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter1.split(), stdout=subprocess.PIPE)
@@ -89,13 +83,10 @@ def invertor_2():
     bashVideoAlter6 = ("ffmpeg -i {0} -vf frei0r=invert0r {1}".format(vid2AlteredLoc,vid2FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter6.split(), stdout=subprocess.PIPE)
 
-<<<<<<< HEAD
 def nothing_2():
     bashVideoAlter7 = ("cp {0} {1}".format(vid2AlteredLoc,vid2FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter7.split(), stdout=subprocess.PIPE)
 
-=======
->>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 def vertigo_3():
     bashVideoAlter1 = ("ffmpeg -i {0} -vf frei0r=vertigo:0.2 {1}".format(vid3AlteredLoc,vid3FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter1.split(), stdout=subprocess.PIPE)
@@ -120,7 +111,6 @@ def invertor_3():
     bashVideoAlter6 = ("ffmpeg -i {0} -vf frei0r=invert0r {1}".format(vid3AlteredLoc,vid3FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter6.split(), stdout=subprocess.PIPE)
 
-<<<<<<< HEAD
 def nothing_3():
     bashVideoAlter7 = ("cp {0} {1}".format(vid3AlteredLoc,vid3FilteredLoc))
     process1 = subprocess.check_call(bashVideoAlter7.split(), stdout=subprocess.PIPE)
@@ -128,11 +118,6 @@ def nothing_3():
 list_1 = [vertigo_1, distorted_1, nervous_1, roxxor_1, twoplayer_1, invertor_1, nothing_1]
 list_2 = [vertigo_2, distorted_2, nervous_2, roxxor_2, twoplayer_2, invertor_2, nothing_2]
 list_3 = [vertigo_3, distorted_3, nervous_3, roxxor_3, twoplayer_3, invertor_3, nothing_3]
-=======
-list_1 = [vertigo_1, distorted_1, nervous_1, roxxor_1, twoplayer_1, invertor_1]
-list_2 = [vertigo_2, distorted_2, nervous_2, roxxor_2, twoplayer_2, invertor_2]
-list_3 = [vertigo_3, distorted_3, nervous_3, roxxor_3, twoplayer_3, invertor_3]
->>>>>>> 5403f1439d274e6741ee3947542826e75d7466d9
 
 random.choice(list_1)()
 random.choice(list_2)()
