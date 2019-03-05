@@ -2,7 +2,7 @@
 
 A zero effort method for generating Youtube content. It relies on [tweepy](http://www.tweepy.org/), [youtube-dl](https://rg3.github.io/youtube-dl/), [ffmpeg](https://www.ffmpeg.org/), & [youtube-upload](https://github.com/tokland/youtube-upload).
 
-https://www.youtube.com/channel/UC2JPR7UAdnqxs7Uaezb0WOQ
+Implementation: https://www.youtube.com/channel/UC2JPR7UAdnqxs7Uaezb0WOQ
 
 ### engine
 Should be the called action when the system is run. Triggers specific actions in sequence.
