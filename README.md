@@ -1,6 +1,6 @@
 # youtubeCollage
 
-A zero effort method for generating Youtube content. It relies on [tweepy](http://www.tweepy.org/), [youtube-dl](https://rg3.github.io/youtube-dl/), [ffmpeg](https://www.ffmpeg.org/), & [youtube-upload](https://github.com/tokland/youtube-upload).
+An automation for generating Youtube content. It relies on [tweepy](http://www.tweepy.org/), [youtube-dl](https://rg3.github.io/youtube-dl/), [ffmpeg](https://www.ffmpeg.org/), & [youtube-upload](https://github.com/tokland/youtube-upload).
 
 Implementation: https://www.youtube.com/channel/UC2JPR7UAdnqxs7Uaezb0WOQ
 
